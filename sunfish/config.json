@@ -127,7 +127,12 @@
         "vendor/lib64/libadsprpc.so",
         "vendor/lib/libadsprpc.so"
       ],
-      "device-vendor": [],
+      "device-vendor": [
+        "PRODUCT_PROPERTY_OVERRIDES += \\",
+        "    ro.hardware.vulkan=adreno \\",
+        "    ro.hardware.egl=adreno \\",
+        "    media.mediadrmservice.enable=true"
+      ],
       "forced-modules": [
         "android.hardware.identity-support-lib.vendor",
         "android.hardware.sensors@2.0-ScopedWakelock.vendor",
@@ -166,8 +171,7 @@
         "nos_app_avb",
         "nos_app_identity",
         "nos_app_keymaster",
-        "nos_app_weaver",
-        "sound_trigger.primary.sm6150"
+        "nos_app_weaver"
       ],
       "new-modules": [],
       "vendor-skip-files": [
